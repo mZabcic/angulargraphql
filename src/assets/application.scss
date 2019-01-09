@@ -2,6 +2,7 @@
 // Vendors - node modules
 @import '~media-blender';
 
+
 // Utils
 @import 'utils/colors';
 @import 'utils/shared-variables';
@@ -104,3 +105,6 @@
 // Footer
 @import 'plugins/lcp-catlist';
 
+@import 'components/latest/latest';
+
+@import 'components/front-page/front-page';

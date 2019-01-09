@@ -1,0 +1,36 @@
+<ngx-headroom>
+<div class="header" id="header">
+  <div *ngIf="menuList != undefined" class="header__container">
+    <a class="header__logo-link" href="http://graphql.localhost" title="Graphql News">
+      <img class="header__logo-img" src="http://graphql.localhost/wp-content/themes/wpbit4bytes/skin/public/images/bit.svg" title="Graphql News - Samo još jedna WordPress web-stranica" alt="Graphql News - Samo još jedna WordPress web-stranica">
+    </a>
+    <span class="header__nav-mobile-menu-trigger">
+       <div class="menu-toggler" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+     </span>
+    <div class="header__nav">
+    
+    <ul class="main-navigation ">
+      <ng-container>
+        <li *ngFor="let menu of menuList" class="main-navigation__item main-navigation__item--menu-item main-navigation__item--menu-item-type-taxonomy main-navigation__item--menu-item-object-category">
+          <a [href]="menu.url" class="main-navigation__link ">
+            <span class="main-navigation__link-text">{{ menu.title }}</span>
+          </a>
+        </li>
+      </ng-container>
+    </ul>
+  <form role="search" method="get" class="header__search-form js-header-serach-form" action="http://graphql.localhost/">
+    <div class="header__search-form-field">
+    <input type="text" value="" name="s" id="s" class="header__search-form-input js-search-form-input input" placeholder="Type in search">
+    <i class="b4bicon b4bicon-zoom"></i>
+    </div>
+    <input type="hidden" name="post_type" value="any">
+  </form>
+    <div class="header__contact">email@email.com</div>
+    </div>
+    </div>
+</div>
+</ngx-headroom>

@@ -1,0 +1,40 @@
+<footer class="footer">
+    <div class="footer__container">
+      <div class="footer__contact">
+        <a class="footer__logo-link" href="http://graphql.localhost" title="Graphql News">
+          <img class="footer__logo-img" src="http://graphql.localhost/wp-content/themes/wpbit4bytes/skin/public/images/bit.svg" title="Graphql News - Samo još jedna WordPress web-stranica" alt="Graphql News - Samo još jedna WordPress web-stranica">
+        </a>
+        <p>
+          This is an example page. It’s different from a blog post because it will stay in one place and will show up
+        </p>
+      </div>
+      <div class="footer__menu-primary">
+     
+      </div>
+      <div class="footer__menu-secondary">
+      
+      </div>
+      <div *ngIf="menuList != undfined" class="footer__menu-third">
+        <ul  class="footer-navigation ">
+          <li *ngFor="let menu of menuList" class="footer-navigation__item  footer-navigation__item--active  footer-navigation__item--122  footer-navigation__item-- footer-navigation__item--menu-item footer-navigation__item--menu-item-type-custom footer-navigation__item--menu-item-object-custom footer-navigation__item--current-menu-item footer-navigation__item--current_page_item">
+            <a [href]="menu.url" class="footer-navigation__link ">
+              <span class="footer-navigation__link-text">{{ menu.title }}</span>
+            </a>
+          </li>
+        </ul>    
+      </div>
+    <!-- insert content here -->
+    </div>
+</footer>
+<div class="footer-copyright">
+    <div class="footer-copyright__container">
+       <div class="footer-copyright__text">
+       © 2018 Mislav Žabčić
+       </div>
+       <div class="footer-copyright__social">
+          <ul class="footer-copyright__social-list">
+            
+          </ul>
+       </div>
+    </div>
+</div>
