@@ -28,6 +28,7 @@ export class PostComponent implements OnInit {
       const getPost = gql`{
         posts(per_page : 4, orderby : "date", slug: "${this.slug}") {
          date,
+         id,
          slug,
          title,
          excerpt,
@@ -55,7 +56,8 @@ export class PostComponent implements OnInit {
            this.post = data[0];
            this.image = this.transform(this.post.featured_image_info.url);
          } else {
-           this.route.navigate[''];
+          this.ngxService.stop();
+          this.route.navigate(['/']);
            return;
          }
          this.ngxService.stop();

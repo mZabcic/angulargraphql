@@ -1,3 +1,46 @@
-<p>
-  search works!
-</p>
+<ngx-ui-loader></ngx-ui-loader>
+<div class="search__container">
+  <div class="search__form-wrap">
+    <form role="search" (submit)='search()' method="get" class="search__form" action="http://graphql.localhost/">
+      <div class="search__search-form-field">
+        <span class="search__search-form-search-for">Tražili ste:</span>
+        <input [(ngModel)]="term" type="text" name="s" id="s" class="search__search-form-search-input js-search-form-input input">
+        <i class="b4bicon b4bicon-zoom"></i>
+      </div>
+      <input type="hidden" name="post_type" value="any">
+      <p class="search__results-count">
+        1 results found. </p>
+    </form>
+
+  </div>
+
+
+  <!-- Page Title -->
+  <header class="search__header">
+    <h1 class="search__header-title">
+      Search Results for: <span>{{term}}</span> </h1>
+  </header>
+
+  <!-- Listing Section -->
+
+  <article class="search-grid">
+    <div *ngIf="posts != undfined" class="search-grid__container">
+      <div *ngFor="let post of posts" class="search-grid__content-wrap">
+        <a class="search-grid__image" [href]="post.link"
+        [style.backgroundImage]="'url('+ post.featured_image_info.url +')'"></a>
+        <div class="search-grid__content">
+          <header>
+            <h2 class="search-grid__heading">
+              <a class="search-grid__heading-link" [href]="post.link">
+                {{post.title}} </a>
+            </h2>
+          </header>
+          <div class="search-grid__excerpt" [innerHTML]="post.excerpt">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </article>
+
+</div>

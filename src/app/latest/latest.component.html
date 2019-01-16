@@ -6,10 +6,10 @@
         <div class="article-grid__content">
           <header>
             <h2 class="article-grid__heading">
-              <a class="article-grid__heading-link" href="http://graphql.localhost/doncicev-show-protiv-lakersa-luka-je-agresor-udarac-i-plesac/">
+              <a class="article-grid__heading-link" [href]="news.link">
                 {{news.title}} </a>
               <span class="article-grid__heading-date">
-                8. siječnja 2019. </span>
+                  {{news.date | date:'d. MMMM yyyy.' }}  </span>
             </h2>
           </header>
         </div>

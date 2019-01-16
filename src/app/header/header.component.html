@@ -1,7 +1,7 @@
 <ngx-headroom>
 <div class="header" id="header">
   <div *ngIf="menuList != undefined" class="header__container">
-    <a class="header__logo-link" href="http://graphql.localhost" title="Graphql News">
+    <a class="header__logo-link" href="" title="Graphql News">
       <img class="header__logo-img" src="http://graphql.localhost/wp-content/themes/wpbit4bytes/skin/public/images/bit.svg" title="Graphql News - Samo još jedna WordPress web-stranica" alt="Graphql News - Samo još jedna WordPress web-stranica">
     </a>
     <span class="header__nav-mobile-menu-trigger">
@@ -22,9 +22,9 @@
         </li>
       </ng-container>
     </ul>
-  <form role="search" method="get" class="header__search-form js-header-serach-form" action="http://graphql.localhost/">
+  <form role="search" method="get" (submit)="search()" class="header__search-form js-header-serach-form" action="http://graphql.localhost/">
     <div class="header__search-form-field">
-    <input type="text" value="" name="s" id="s" class="header__search-form-input js-search-form-input input" placeholder="Type in search">
+    <input [(ngModel)]="term" type="text"  name="s" id="s" class="header__search-form-input js-search-form-input input" placeholder="Type in search">
     <i class="b4bicon b4bicon-zoom"></i>
     </div>
     <input type="hidden" name="post_type" value="any">

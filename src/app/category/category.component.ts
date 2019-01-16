@@ -10,6 +10,8 @@ import { map } from 'rxjs/operators';
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.css']
 })
+
+// TODO PAGINACIJA
 export class CategoryComponent implements OnInit {
 
   categoryName : String;
@@ -41,15 +43,16 @@ export class CategoryComponent implements OnInit {
      })
      .valueChanges.pipe(map(((result: any) => result.data.categories)))
      .subscribe(data => {
-      var id = data[0].id;
       if (data.length > 0) {
-        this.category = data[0];
+        var id = data[0].id;
       } else {
-        this.route.navigate[''];
+       this.ngxService.stop();
+       this.route.navigate(['/']);
         return;
       }
+      
       const getPost = gql`{
-        posts(per_page : 4, orderby : "date", categories: "${id}") {
+        posts(per_page : 10, orderby : "date", categories: "${id}") {
          date,
          slug,
          title,

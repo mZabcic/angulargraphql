@@ -1,0 +1,63 @@
+<h3 id="comments">
+  6 komentara na “{{postName}}” </h3>
+
+<div class="navigation">
+  <div class="alignleft"></div>
+  <div class="alignright"></div>
+</div>
+
+<ol class="commentlist">
+  <li *ngFor="let comment of comments" class="comment even thread-odd thread-alt parent">
+    <div class="comment-body" id="comment-{{comment.id}}">
+      <div class="comment-author">
+        <cite class="fn">{{comment.author_name.length == 0 ? "Anonimno" : comment.author_name}}</cite> <span class="says">
+          napisao:</span> </div>
+
+      <div class="comment-meta commentmetadata"><a style="cursor : pointer;" (click)="respond(comment)">
+          {{comment.date | date:'d. MMMM yyyy.' }} </a> </div>
+
+      <div [innerHTML]="comment.content"></div>
+
+      <div class="reply"><a rel="nofollow" class="comment-reply-link" style="cursor : pointer;" (click)="respond(comment)"
+          aria-label="Odgovori na ">Odgovori</a></div>
+    </div>
+    <ul *ngIf="comment.children.length > 0" class="children">
+      <li *ngFor="let child of comment.children" class="comment odd alt depth-2" id="comment-146">
+        <div id="div-comment-146" class="comment-body">
+          <div class="comment-author vcard">
+            <cite class="fn">{{comment.author_name.length == 0 ? "Anonimno" : comment.author_name}}</cite> <span class="says">napisao:</span>
+          </div>
+
+          <div class="comment-meta commentmetadata"><a style="cursor : pointer;" (click)="respond(child)">
+              {{comment.date | date:'d. MMMM yyyy.' }} </a> </div>
+
+          <div [innerHTML]="comment.content"></div>
+
+          <div class="reply"><a rel="nofollow" class="comment-reply-link" style="cursor : pointer;" (click)="respond(child)"
+              aria-label="Odgovori na Haahahaha">Odgovori</a></div>
+        </div>
+      </li><!-- #comment-## -->
+    </ul><!-- .children -->
+  </li><!-- #comment-## -->
+</ol>
+
+<div class="navigation">
+  <div class="alignleft"></div>
+  <div class="alignright"></div>
+</div>
+
+<div id="respond" class="comment-respond">
+  <h3 id="reply-title" class="comment-reply-title">Odgovori <ng-container *ngIf="this.respondComment.id != undefined">na
+      <a style="cursor : pointer;" (click)=navigateTo(respondComment.id)> Anonimno</a></ng-container>
+    <small><a *ngIf="this.respondComment.id != undefined" (click)="cancelRespond()" rel="nofollow" id="cancel-comment-reply-link"
+        style="cursor : pointer;"> Otkaži odgovor</a></small></h3>
+  <form (submit)="comment()" method="post" id="commentform" class="comment-form">
+    <p class="comment-notes"><span id="email-notes">Vaša adresa e-pošte neće biti objavljena.</span></p>
+    <p class="comment-form-comment"><label for="comment">Komentar</label> <textarea [(ngModel)]="newComment" id="comment" name="comment" cols="45"
+        rows="8" maxlength="65525" required="required"></textarea></p>
+    <p class="comment-form-author"><label for="author">Ime</label> <input [(ngModel)]="newComment" id="author" name="author" type="text" value=""
+        size="30" maxlength="245"></p>
+    <p class="form-submit"><input  name="submit" type="submit" id="submit" class="submit" value="Objavi komentar">
+    </p>
+  </form>
+</div>

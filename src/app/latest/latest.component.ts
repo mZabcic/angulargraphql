@@ -23,8 +23,9 @@ export class LatestComponent implements OnInit {
 
   getLatest() {
     const getLatest = gql`{
-      posts(per_page : 3, orderby : "modified") {
+      posts(per_page : 3, orderby : "date") {
        modified,
+       date,
        title,
        excerpt,
        link

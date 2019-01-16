@@ -3,6 +3,7 @@ import { Apollo } from "apollo-angular";
 import gql from "graphql-tag";
 import { map } from 'rxjs/operators';
 import { AppConfig } from '../app-config';
+import {Router, ActivatedRoute, Params} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -12,8 +13,9 @@ import { AppConfig } from '../app-config';
 export class HeaderComponent implements OnInit {
 
   menuList : any;
+  term : String;
 
-  constructor(private apollo: Apollo) { }
+  constructor(private apollo: Apollo, private route : Router) { }
 
   ngOnInit() {
     const getHeaderNav = gql`
@@ -48,5 +50,10 @@ export class HeaderComponent implements OnInit {
       newLinks.push(link);
     }
     return newLinks;
+  }
+
+  search() {
+    this.route.navigate(['/search'], { queryParams: { s: this.term } });
+    this.term = "";
   }
 }

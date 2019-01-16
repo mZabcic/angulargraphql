@@ -18,6 +18,8 @@ import { CategoryComponent } from './category/category.component';
 import { LatestComponent } from './latest/latest.component';
 import { PostComponent } from './post/post.component';
 import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
+import { CommentsComponent } from './comments/comments.component';
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import { SearchComponent } from './search/search.component';
     CategoryComponent,
     LatestComponent,
     PostComponent,
-    SearchComponent
+    SearchComponent,
+    CommentsComponent
   ],
   imports: [
     HttpClientModule,
@@ -38,7 +41,8 @@ import { SearchComponent } from './search/search.component';
     GraphQLModule,
     BrowserAnimationsModule,
     HeadroomModule,
-    NgxUiLoaderModule
+    NgxUiLoaderModule,
+    FormsModule
   ],
   bootstrap: [AppComponent]
 })
