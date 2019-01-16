@@ -13,7 +13,11 @@ import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import HeadroomModule
 import { HeadroomModule } from '@ctrl/ngx-headroom';
-
+import { NgxUiLoaderModule } from  'ngx-ui-loader';
+import { CategoryComponent } from './category/category.component';
+import { LatestComponent } from './latest/latest.component';
+import { PostComponent } from './post/post.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -21,7 +25,11 @@ import { HeadroomModule } from '@ctrl/ngx-headroom';
     AppComponent,
     HomepageComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CategoryComponent,
+    LatestComponent,
+    PostComponent,
+    SearchComponent
   ],
   imports: [
     HttpClientModule,
@@ -29,9 +37,9 @@ import { HeadroomModule } from '@ctrl/ngx-headroom';
     AppRoutingModule,
     GraphQLModule,
     BrowserAnimationsModule,
-    HeadroomModule
+    HeadroomModule,
+    NgxUiLoaderModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

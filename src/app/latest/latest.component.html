@@ -1,0 +1,19 @@
+<aside class="latest">
+  <section >
+    <div class="article-category__title">Najnovije vijesti</div>
+    <article *ngFor="let news of latest" class="article-grid">
+      <div class="article-grid__container">
+        <div class="article-grid__content">
+          <header>
+            <h2 class="article-grid__heading">
+              <a class="article-grid__heading-link" href="http://graphql.localhost/doncicev-show-protiv-lakersa-luka-je-agresor-udarac-i-plesac/">
+                {{news.title}} </a>
+              <span class="article-grid__heading-date">
+                8. siječnja 2019. </span>
+            </h2>
+          </header>
+        </div>
+      </div>
+    </article>
+  </section>
+</aside>

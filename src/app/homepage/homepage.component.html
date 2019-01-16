@@ -1,343 +1,36 @@
+<ngx-ui-loader></ngx-ui-loader>
 <section class="front-page">
   <div class="front-page__main">
-  <div class="article-category">
-  <div class="article-category__container article-category__container--no-border">
-      <div class="article-category__content-wrap">
+  <div  class="article-category">
+  <div *ngFor="let category of categoryList" class="article-category__container article-category__container--no-border">
+      <div *ngIf="category != undefined" class="article-category__content-wrap">
           
           <div class="article-category__content">
           <div class="article-category__heading">
-              <h1 class="article-category__title"><a href="/kategorija/crna-kronika">Crna kronika </a></h1>
+              <h1 class="article-category__title"><a [href]="category.link"> {{category.name}} </a></h1>
           </div>
           <div class="article-category__grid">
-              <article class="article-grid">
-    <div class="article-grid__container">
-    <a class="article-grid__image" href="http://graphql.localhost/sapiente-veritatis-mollitia-assumenda-fugiat/" style="background-image:url(http://graphql.localhost/wp-content/uploads/2018/12/bd343c3d-23d3-3775-aff1-d426fec8be3d.jpg)">
-    <div class="post-list__image">
-         <img width="800" height="600" src="http://graphql.localhost/wp-content/uploads/2018/12/bd343c3d-23d3-3775-aff1-d426fec8be3d-800x600.jpg" class="attachment-listing-grid size-listing-grid wp-post-image" alt="">    </div></a>
-    <div class="article-grid__content">
-      <header>
-      <h2 class="article-grid__heading">
-        <a class="article-grid__heading-link" href="http://graphql.localhost/sapiente-veritatis-mollitia-assumenda-fugiat/">
-          Sapiente veritatis mollitia assumenda fugiat      </a>
-        <span class="article-grid__heading-date">
-         28. studenoga 2018.      </span>
-      </h2>
-      </header>
-      <div class="article-grid__excerpt block-with-text">
-      
-        <p>Et deleniti error eius nihil iste corrupti et dolores dignissimos quia ea voluptate quos deserunt accusamus labore sunt beatae iste earum veniam tenetur sed soluta consectetur esse labore sapiente asperiores praesentium quia quis quia reprehenderit ea aut dolor ipsum soluta animi dolores.</p>
-      </div>
-      <div class="article-grid__heading-categories">
-         <a href="/kategorija/crna-kronika "> Crna kronika</a>      </div>
-    </div>
-    </div>
-    
-
-  </article>
-  <article class="article-grid">
-    <div class="article-grid__container">
-    <a class="article-grid__image" href="http://graphql.localhost/dolore-enim-nesciunt-distinctio/" style="background-image:url(http://graphql.localhost/wp-content/uploads/2018/12/a5ca7650-3e80-37f5-9cd5-e9f2b9e09323.jpg)">
-    <div class="post-list__image">
-         <img width="800" height="600" src="http://graphql.localhost/wp-content/uploads/2018/12/a5ca7650-3e80-37f5-9cd5-e9f2b9e09323-800x600.jpg" class="attachment-listing-grid size-listing-grid wp-post-image" alt="">    </div></a>
-    <div class="article-grid__content">
-      <header>
-      <h2 class="article-grid__heading">
-        <a class="article-grid__heading-link" href="http://graphql.localhost/dolore-enim-nesciunt-distinctio/">
-          Dolore enim nesciunt distinctio      </a>
-        <span class="article-grid__heading-date">
-         28. listopada 2018.      </span>
-      </h2>
-      </header>
-      <div class="article-grid__excerpt block-with-text">
-      
-        <p>Nesciunt inventore qui neque voluptatem harum corrupti laudantium molestias sit porro impedit accusamus aut blanditiis dolor laborum consequatur ut molestiae maiores molestiae totam veniam voluptatem quia et et reprehenderit amet nisi fugit nostrum tempora reprehenderit nesciunt quaerat excepturi est saepe tenetur qui perspiciatis facilis sint occaecati dolore nihil atque eos possimus.</p>
-      </div>
-      <div class="article-grid__heading-categories">
-         <a href="/kategorija/crna-kronika "> Crna kronika</a>      </div>
-    </div>
-    </div>
-
-  </article>
-  <article class="article-grid">
-    <div class="article-grid__container">
-    <a class="article-grid__image" href="http://graphql.localhost/vel-voluptas-quisquam-sint/" style="background-image:url(http://graphql.localhost/wp-content/uploads/2018/12/fd1e6d5a-aecc-3e05-82ee-506ca5e1ee31.jpg)">
-    <div class="post-list__image">
-         <img width="800" height="600" src="http://graphql.localhost/wp-content/uploads/2018/12/fd1e6d5a-aecc-3e05-82ee-506ca5e1ee31-800x600.jpg" class="attachment-listing-grid size-listing-grid wp-post-image" alt="">    </div></a>
-    <div class="article-grid__content">
-      <header>
-      <h2 class="article-grid__heading">
-        <a class="article-grid__heading-link" href="http://graphql.localhost/vel-voluptas-quisquam-sint/">
-          Vel voluptas quisquam sint      </a>
-        <span class="article-grid__heading-date">
-         24. listopada 2018.      </span>
-      </h2>
-      </header>
-      <div class="article-grid__excerpt block-with-text">
-      
-        <p>Nobis sit nihil dolorum minus quis et dicta ut ipsum ipsam rerum et enim at ex harum debitis.</p>
-      </div>
-      <div class="article-grid__heading-categories">
-         <a href="/kategorija/crna-kronika "> Crna kronika</a>      </div>
-    </div>
-    </div>
-
-  </article>
-          </div>
-          </div>
-          
-      </div>
-  </div>
-  </div>
-  <div class="article-category">
-  <div class="article-category__container article-category__container--no-border">
-      <div class="article-category__content-wrap">
-          
-          <div class="article-category__content">
-          <div class="article-category__heading">
-              <h1 class="article-category__title"><a href="/kategorija/kultura">Kultura </a></h1>
-          </div>
-          <div class="article-category__grid">
-              <article class="article-grid">
-    <div class="article-grid__container">
-    <a class="article-grid__image" href="http://graphql.localhost/neque-eos-vitae-voluptatum-necessitatibus/" style="background-image:url(http://graphql.localhost/wp-content/uploads/2018/12/081abbc8-81fa-3698-8f2d-5bb9f861ccf4.jpg)">
-    <div class="post-list__image">
-         <img width="800" height="600" src="http://graphql.localhost/wp-content/uploads/2018/12/081abbc8-81fa-3698-8f2d-5bb9f861ccf4-800x600.jpg" class="attachment-listing-grid size-listing-grid wp-post-image" alt="">    </div></a>
-    <div class="article-grid__content">
-      <header>
-      <h2 class="article-grid__heading">
-        <a class="article-grid__heading-link" href="http://graphql.localhost/neque-eos-vitae-voluptatum-necessitatibus/">
-          Neque eos vitae voluptatum necessitatibus      </a>
-        <span class="article-grid__heading-date">
-         25. studenoga 2018.      </span>
-      </h2>
-      </header>
-      <div class="article-grid__excerpt block-with-text">
-      
-        <p>Error similique aut harum voluptatem adipisci id quisquam neque facilis qui modi aliquid enim nesciunt animi rerum et debitis officiis ducimus est temporibus aliquid dolores quia pariatur iste sint laborum temporibus vero enim ex facilis rerum sit temporibus molestiae qui consequatur earum et explicabo unde sequi beatae similique non facilis aut aspernatur et blanditiis in eaque id eaque accusamus recusandae doloremque eius et alias commodi illum reiciendis ea corrupti.</p>
-      </div>
-      <div class="article-grid__heading-categories">
-         <a href="/kategorija/kultura "> Kultura</a>      </div>
-    </div>
-    </div>
-
-  </article>
-  <article class="article-grid">
-    <div class="article-grid__container">
-    <a class="article-grid__image" href="http://graphql.localhost/sunt-velit-necessitatibus-reprehenderit-ad-sed/" style="background-image:url(http://graphql.localhost/wp-content/uploads/2018/12/3f171a45-5562-3dbb-8409-6b06b0566ca4.jpg)">
-    <div class="post-list__image">
-         <img width="800" height="600" src="http://graphql.localhost/wp-content/uploads/2018/12/3f171a45-5562-3dbb-8409-6b06b0566ca4-800x600.jpg" class="attachment-listing-grid size-listing-grid wp-post-image" alt="">    </div></a>
-    <div class="article-grid__content">
-      <header>
-      <h2 class="article-grid__heading">
-        <a class="article-grid__heading-link" href="http://graphql.localhost/sunt-velit-necessitatibus-reprehenderit-ad-sed/">
-          Sunt velit necessitatibus reprehenderit ad sed      </a>
-        <span class="article-grid__heading-date">
-         8. listopada 2018.      </span>
-      </h2>
-      </header>
-      <div class="article-grid__excerpt block-with-text">
-      
-        <p>Quaerat dicta qui id molestias molestias dolor saepe unde suscipit id adipisci nemo sed et ut numquam ad ullam quia aut ullam quis voluptatem eos molestias recusandae praesentium minus.</p>
-      </div>
-      <div class="article-grid__heading-categories">
-         <a href="/kategorija/glazba "> Glazba</a>, <a href="/kategorija/kultura "> Kultura</a>      </div>
-    </div>
-    </div>
-
-  </article>
-          </div>
-          </div>
-          
-      </div>
-  </div>
-  </div>
-  <div class="article-category">
-  <div class="article-category__container article-category__container--no-border">
-      <div class="article-category__content-wrap">
-          
-          <div class="article-category__content">
-          <div class="article-category__heading">
-              <h1 class="article-category__title"><a href="/kategorija/nekategorizirano">Nekategorizirano </a></h1>
-          </div>
-          <div class="article-category__grid">
-              <article class="article-grid">
-    <div class="article-grid__container">
-    <a class="article-grid__image" href="http://graphql.localhost/229-2/" style="background-image:url(https://via.placeholder.com/1940x768.png?text=bit4bytes.com)">
-    <div class="post-list__image">
-             </div></a>
-    <div class="article-grid__content">
-      <header>
-      <h2 class="article-grid__heading">
-        <a class="article-grid__heading-link" href="http://graphql.localhost/229-2/">
-                </a>
-        <span class="article-grid__heading-date">
-         8. siječnja 2019.      </span>
-      </h2>
-      </header>
-      <div class="article-grid__excerpt block-with-text">
-      
-        <p>dsafdsavcx&nbsp;</p>
-      </div>
-      <div class="article-grid__heading-categories">
-         <a href="/kategorija/nekategorizirano "> Nekategorizirano</a>      </div>
-    </div>
-    </div>
-    
- 
-  </article>
-          </div>
-          </div>
-          
-      </div>
-  </div>
-  </div>
-  <div class="article-category">
-  <div class="article-category__container article-category__container--no-border">
-      <div class="article-category__content-wrap">
-          
-          <div class="article-category__content">
-          <div class="article-category__heading">
-              <h1 class="article-category__title"><a href="/kategorija/showbizz">Showbizz </a></h1>
-          </div>
-          <div class="article-category__grid">
-              <article class="article-grid">
-    <div class="article-grid__container">
-    <a class="article-grid__image" href="http://graphql.localhost/et-aperiam-voluptatem-deserunt/" style="background-image:url(http://graphql.localhost/wp-content/uploads/2018/12/fb10c5b4-a8a8-30f9-ae28-d4587222cbc2.jpg)">
-    <div class="post-list__image">
-         <img width="800" height="600" src="http://graphql.localhost/wp-content/uploads/2018/12/fb10c5b4-a8a8-30f9-ae28-d4587222cbc2-800x600.jpg" class="attachment-listing-grid size-listing-grid wp-post-image" alt="">    </div></a>
-    <div class="article-grid__content">
-      <header>
-      <h2 class="article-grid__heading">
-        <a class="article-grid__heading-link" href="http://graphql.localhost/et-aperiam-voluptatem-deserunt/">
-          Et aperiam voluptatem deserunt      </a>
-        <span class="article-grid__heading-date">
-         1. prosinca 2018.      </span>
-      </h2>
-      </header>
-      <div class="article-grid__excerpt block-with-text">
-      
-        <p>Error voluptate nulla corrupti hic aut neque sunt aut ut est cupiditate ut deleniti non minus omnis ratione temporibus alias pariatur et quod architecto dignissimos nesciunt nulla et in labore autem eos praesentium quasi dolores optio non quia quidem aut et rerum quod velit cum aut voluptatem rerum autem.</p>
-      </div>
-      <div class="article-grid__heading-categories">
-         <a href="/kategorija/showbizz "> Showbizz</a>      </div>
-    </div>
-    </div>
-    
-
-  </article>
-  <article class="article-grid">
-    <div class="article-grid__container">
-    <a class="article-grid__image" href="http://graphql.localhost/alias-repellat-itaque-laborum-aut-est-aut/" style="background-image:url(http://graphql.localhost/wp-content/uploads/2018/12/ecfa2689-d017-3d70-a65c-d8a2d2d377ad.jpg)">
-    <div class="post-list__image">
-         <img width="800" height="600" src="http://graphql.localhost/wp-content/uploads/2018/12/ecfa2689-d017-3d70-a65c-d8a2d2d377ad-800x600.jpg" class="attachment-listing-grid size-listing-grid wp-post-image" alt="">    </div></a>
-    <div class="article-grid__content">
-      <header>
-      <h2 class="article-grid__heading">
-        <a class="article-grid__heading-link" href="http://graphql.localhost/alias-repellat-itaque-laborum-aut-est-aut/">
-          Alias repellat itaque laborum aut est aut      </a>
-        <span class="article-grid__heading-date">
-         20. studenoga 2018.      </span>
-      </h2>
-      </header>
-      <div class="article-grid__excerpt block-with-text">
-      
-        <p>Autem aut labore voluptas mollitia fuga ut ratione est exercitationem temporibus dolorem explicabo culpa modi aut quo perspiciatis aperiam enim voluptates nostrum tempore molestiae et consequatur quas et alias est fuga tenetur eos eos laborum sed ipsum distinctio accusantium amet quis vel rem blanditiis sed qui ad et quod sit non ea id eum labore illo impedit qui harum et reprehenderit error provident.</p>
-      </div>
-      <div class="article-grid__heading-categories">
-         <a href="/kategorija/showbizz "> Showbizz</a>      </div>
-    </div>
-    </div>
-
-  </article>
-  <article class="article-grid">
-    <div class="article-grid__container">
-    <a class="article-grid__image" href="http://graphql.localhost/voluptatem-aut-esse-nobis-nam-magnam-modi/" style="background-image:url(http://graphql.localhost/wp-content/uploads/2018/12/c3bc3a0a-6e12-351c-b069-b8d3121531bb.jpg)">
-    <div class="post-list__image">
-         <img width="800" height="600" src="http://graphql.localhost/wp-content/uploads/2018/12/c3bc3a0a-6e12-351c-b069-b8d3121531bb-800x600.jpg" class="attachment-listing-grid size-listing-grid wp-post-image" alt="">    </div></a>
-    <div class="article-grid__content">
-      <header>
-      <h2 class="article-grid__heading">
-        <a class="article-grid__heading-link" href="http://graphql.localhost/voluptatem-aut-esse-nobis-nam-magnam-modi/">
-          Voluptatem aut esse nobis nam magnam modi      </a>
-        <span class="article-grid__heading-date">
-         5. studenoga 2018.      </span>
-      </h2>
-      </header>
-      <div class="article-grid__excerpt block-with-text">
-      
-        <p>Minus facere maiores dicta accusantium aperiam qui. Atque aliquid necessitatibus et rerum id. Molestiae voluptates inventore et vel ab</p>
-      </div>
-      <div class="article-grid__heading-categories">
-         <a href="/kategorija/showbizz "> Showbizz</a>      </div>
-    </div>
-    </div>
-    
-  </article>
-          </div>
-          </div>
-          
-      </div>
-  </div>
-  </div>
-  <div class="article-category">
-  <div class="article-category__container article-category__container--no-border">
-      <div class="article-category__content-wrap">
-          
-          <div class="article-category__content">
-          <div class="article-category__heading">
-              <h1 class="article-category__title"><a href="/kategorija/sport">Sport </a></h1>
-          </div>
-          <div class="article-category__grid">
-              <article class="article-grid">
-    <div class="article-grid__container">
-    <a class="article-grid__image" href="http://graphql.localhost/doncicev-show-protiv-lakersa-luka-je-agresor-udarac-i-plesac/" style="background-image:url(http://graphql.localhost/wp-content/uploads/2019/01/Screenshot-from-2019-01-08-11-25-44.png)">
-    <div class="post-list__image">
-         <img width="765" height="508" src="http://graphql.localhost/wp-content/uploads/2019/01/Screenshot-from-2019-01-08-11-25-44.png" class="attachment-listing-grid size-listing-grid wp-post-image" alt="" srcset="http://graphql.localhost/wp-content/uploads/2019/01/Screenshot-from-2019-01-08-11-25-44.png 765w, http://graphql.localhost/wp-content/uploads/2019/01/Screenshot-from-2019-01-08-11-25-44-300x199.png 300w, http://graphql.localhost/wp-content/uploads/2019/01/Screenshot-from-2019-01-08-11-25-44-600x398.png 600w, http://graphql.localhost/wp-content/uploads/2019/01/Screenshot-from-2019-01-08-11-25-44-254x169.png 254w" sizes="(max-width: 765px) 100vw, 765px">    </div></a>
-    <div class="article-grid__content">
-      <header>
-      <h2 class="article-grid__heading">
-        <a class="article-grid__heading-link" href="http://graphql.localhost/doncicev-show-protiv-lakersa-luka-je-agresor-udarac-i-plesac/">
-          Dončićev show protiv Lakersa: “Luka je agresor, udarač i plesač!”      </a>
-        <span class="article-grid__heading-date">
-         8. siječnja 2019.      </span>
-      </h2>
-      </header>
-      <div class="article-grid__excerpt block-with-text">
-      
-        <p>LAKERSI su pobijedili kod Mavericksa 111:95 predvođeni odličnim Brandonom Ingramom (29 poena), Lonzom Ballom (21 poen) i Joshom Hartom (14 poena, 12 skokova), ali američke televizijske komentatore još jednom je zadivio Luka Dončić. Tinejdžerski (19) rookie iz Slovenije odigrao je jednu od najefikasnijih utakmica otkako je u NBA-u. S 27 koševa (šut iz igre 10/23) […]</p>
-      </div>
-      <div class="article-grid__heading-categories">
-         <a href="/kategorija/kosarka "> Košarka</a>, <a href="/kategorija/sport "> Sport</a>      </div>
-    </div>
-    </div>
-    
-
-  </article>
-  <article class="article-grid">
-    <div class="article-grid__container">
-    <a class="article-grid__image" href="http://graphql.localhost/dolor-dicta-consequatur-a-quo/" style="background-image:url(http://graphql.localhost/wp-content/uploads/2018/12/ecfa2689-d017-3d70-a65c-d8a2d2d377ad.jpg)">
-    <div class="post-list__image">
-         <img width="800" height="600" src="http://graphql.localhost/wp-content/uploads/2018/12/ecfa2689-d017-3d70-a65c-d8a2d2d377ad-800x600.jpg" class="attachment-listing-grid size-listing-grid wp-post-image" alt="">    </div></a>
-    <div class="article-grid__content">
-      <header>
-      <h2 class="article-grid__heading">
-        <a class="article-grid__heading-link" href="http://graphql.localhost/dolor-dicta-consequatur-a-quo/">
-          Dolor dicta consequatur a quo      </a>
-        <span class="article-grid__heading-date">
-         12. studenoga 2018.      </span>
-      </h2>
-      </header>
-      <div class="article-grid__excerpt block-with-text">
-      
-        <p>Sed non totam rerum. Nam ducimus tenetur vero at. Ipsum in aut totam nobis. Ipsam sed minus est sint ipsam tempora. Sed magni sint qui exercitationem libero dolorem. Enim tenetur provident autem qui qui </p>
-      </div>
-      <div class="article-grid__heading-categories">
-         <a href="/kategorija/sport "> Sport</a>      </div>
-    </div>
-    </div>
-    
- 
-  </article>
+          <article *ngFor="let post of posts.get(category.id)" class="article-grid">
+            <div class="article-grid__container">
+            <a class="article-grid__image" [href]="post.link" >
+            <div class="post-list__image">
+                <img width="800" height="600" [src]="post.featured_image_info.url" class="attachment-listing-grid size-listing-grid wp-post-image" alt="">    </div></a>
+            <div class="article-grid__content">
+              <header>
+              <h2 class="article-grid__heading">
+                <a class="article-grid__heading-link" [href]="post.link">
+                  {{post.title}}      </a>
+                <span class="article-grid__heading-date">
+                    {{post.date | date:'d. MMMM yyyy.' }}     </span>
+              </h2>
+              </header>
+              <div class="article-grid__excerpt block-with-text" [innerHTML]="post.excerpt">
+              </div>
+              <div class="article-grid__heading-categories">
+                <a *ngFor="let cat of post.categories_object"  [href]="cat.link"> {{cat.name}} </a>      </div>
+            </div>
+            </div>
+            </article>
           </div>
           </div>
           
@@ -345,57 +38,8 @@
   </div>
   </div>
   </div>
-  <aside>
-   
-  <section class="latest">
-  <div class="article-category__title">Najnovije vijesti</div>
-  <article class="article-grid">
-    <div class="article-grid__container">
-    <div class="article-grid__content">
-      <header>
-      <h2 class="article-grid__heading">
-        <a class="article-grid__heading-link" href="http://graphql.localhost/229-2/">
-                </a>
-        <span class="article-grid__heading-date">
-         8. siječnja 2019.      </span>
-      </h2>
-      </header>
-    </div>
-    </div>
-    
- 
-  </article><article class="article-grid">
-    <div class="article-grid__container">
-    <div class="article-grid__content">
-      <header>
-      <h2 class="article-grid__heading">
-        <a class="article-grid__heading-link" href="http://graphql.localhost/doncicev-show-protiv-lakersa-luka-je-agresor-udarac-i-plesac/">
-          Dončićev show protiv Lakersa: “Luka je agresor, udarač i plesač!”      </a>
-        <span class="article-grid__heading-date">
-         8. siječnja 2019.      </span>
-      </h2>
-      </header>
-    </div>
-    </div>
-    
 
-  </article><article class="article-grid">
-    <div class="article-grid__container">
-    <div class="article-grid__content">
-      <header>
-      <h2 class="article-grid__heading">
-        <a class="article-grid__heading-link" href="http://graphql.localhost/et-aperiam-voluptatem-deserunt/">
-          Et aperiam voluptatem deserunt      </a>
-        <span class="article-grid__heading-date">
-         1. prosinca 2018.      </span>
-      </h2>
-      </header>
-    </div>
-    </div>
-    
- 
-  </article></section></aside>
-  
+  <app-latest></app-latest>
   
 </section>
   

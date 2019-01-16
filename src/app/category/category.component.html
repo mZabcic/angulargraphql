@@ -1,0 +1,49 @@
+<ngx-ui-loader></ngx-ui-loader>
+<section *ngIf="category != undefined" class="front-page">
+  <div class="front-page__main">
+    <div class="article-category">
+      <div class="article-category__container">
+        <div  class="article-category__content-wrap">
+
+          <div class="article-category__content">
+            <div class="article-category__heading">
+              <h1 class="article-category__title">{{category.name}}</h1>
+              <p class="article-category__desc"></p>
+            </div>
+            <div class="article-category__grid">
+              <article *ngFor="let post of posts" class="article-grid">
+                <div class="article-grid__container">
+                  <a class="article-grid__image"  [href]="post.link">
+                    <div class="post-list__image">
+                      <img width="800" height="600" [src]="post.featured_image_info.url"
+                        class="attachment-listing-grid size-listing-grid wp-post-image" alt=""> </div>
+                  </a>
+                  <div class="article-grid__content">
+                    <header>
+                      <h2 class="article-grid__heading">
+                        <a class="article-grid__heading-link"  [href]="post.link">
+                          {{post.title}} </a>
+                        <span class="article-grid__heading-date">
+                            {{post.date | date:'d. MMMM yyyy.' }}  </span>
+                      </h2>
+                    </header>
+                    <div class="article-grid__excerpt block-with-text" [innerHTML]="post.excerpt">
+                    </div>
+                    <div class="article-grid__heading-categories">
+                        <a *ngFor="let cat of post.categories_object"  [href]="cat.link"> {{cat.name}} </a>      </div>
+                  </div>
+                </div>
+
+              </article>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-latest></app-latest>
+
+
+</section>

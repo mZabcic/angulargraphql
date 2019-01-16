@@ -1,0 +1,28 @@
+<ngx-ui-loader></ngx-ui-loader>
+<section *ngIf="post != undefined" class="single-news">
+    <header>
+      <div class="single-news__background" [style.backgroundImage]="'url('+ post.featured_image_info.url +')'">
+        <h1 class="single-news__title">
+          {{post.title}}     </h1>
+      </div>
+    </header>
+    <div class="single-news__content content-style content-media-style" [innerHTML]="post.content">
+    </div>
+    
+    
+  <!-- You can start editing here. -->
+  
+  
+        <!-- If comments are open, but there are no comments. -->
+  
+     
+    <div id="respond" class="comment-respond">
+      <h3 id="reply-title" class="comment-reply-title">Odgovori <small><a rel="nofollow" id="cancel-comment-reply-link" href="/doncicev-show-protiv-lakersa-luka-je-agresor-udarac-i-plesac/?preview_id=226&amp;preview_nonce=be6b614894&amp;preview=true&amp;_thumbnail_id=227#respond" style="display:none;">Otkaži odgovor</a></small></h3>			<form action="http://graphql.localhost/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+          <p class="logged-in-as"><a href="http://graphql.localhost/wp-admin/profile.php" aria-label="Prijavljeni kaomislavz. Uredi moj profil.">Prijavljeni kao mislavz</a>. <a href="http://graphql.localhost/wp-login.php?action=logout&amp;redirect_to=http%3A%2F%2Fgraphql.localhost%2Fdoncicev-show-protiv-lakersa-luka-je-agresor-udarac-i-plesac%2F&amp;_wpnonce=ab4516b8b1">Odjava?</a></p><p class="comment-form-comment"><label for="comment">Komentar</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Objavi komentar"> <input type="hidden" name="comment_post_ID" value="226" id="comment_post_ID">
+  <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+  </p><input type="hidden" id="_wp_unfiltered_html_comment_disabled" name="_wp_unfiltered_html_comment" value="877b9e8aea"><script>(function(){if(window===window.parent){document.getElementById('_wp_unfiltered_html_comment_disabled').name='_wp_unfiltered_html_comment';}})();</script>
+        </form>
+        </div><!-- #respond -->
+      
+ 
+  </section>
