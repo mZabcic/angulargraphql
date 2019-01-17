@@ -30,6 +30,8 @@ export class CommentsComponent implements OnInit {
   }
 
   respond(comment) {
+    document.getElementById('respond').scrollIntoView();
+
     this.respondComment = comment;
   }
 
@@ -38,7 +40,7 @@ export class CommentsComponent implements OnInit {
   }
 
   navigateTo(id) {
-
+    document.getElementById('comment-' + id).scrollIntoView();
   }
 
 
@@ -64,7 +66,7 @@ export class CommentsComponent implements OnInit {
   }).subscribe(({ data }) => {
     this.name = "";
     this.newComment = "";
-    this.getComments();
+    this.getComments(true, data.newComment.id);
   },(error) => {
     this.error = true;
   });
@@ -72,7 +74,7 @@ export class CommentsComponent implements OnInit {
   }
  
 
-  getComments() {
+  getComments(navigate : boolean = false, id : number = 0) {
     const getComments = gql`{
       comments(per_page : 100, orderby : "date", post: "${this.post}", parent: "0") {
        id,
@@ -115,6 +117,9 @@ export class CommentsComponent implements OnInit {
       .valueChanges.pipe(map(((result: any) => result.data.comments))).subscribe(data => {
         this.comments = data;
         this.setCount(this.comments);
+        if (navigate) {
+          document.getElementById('comments').scrollIntoView();
+        }
         this.ngxService.stop();
       })
   }

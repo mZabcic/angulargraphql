@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule }    from '@angular/common/http';
@@ -20,7 +19,14 @@ import { PostComponent } from './post/post.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { CommentsComponent } from './comments/comments.component';
+import { LOCALE_ID } from '@angular/core';
+import localeHr from '@angular/common/locales/hr';
+import { registerLocaleData } from '@angular/common';
+import { SubCategoryComponent } from './sub-category/sub-category.component'
 
+// the second parameter 'fr' is optional
+
+registerLocaleData(localeHr, 'hr');
 
 @NgModule({
   declarations: [
@@ -32,7 +38,8 @@ import { CommentsComponent } from './comments/comments.component';
     LatestComponent,
     PostComponent,
     SearchComponent,
-    CommentsComponent
+    CommentsComponent,
+    SubCategoryComponent
   ],
   imports: [
     HttpClientModule,
@@ -44,6 +51,8 @@ import { CommentsComponent } from './comments/comments.component';
     NgxUiLoaderModule,
     FormsModule
   ],
+  providers: [ { provide: LOCALE_ID, useValue: 'hr' } ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+ }

@@ -13,7 +13,7 @@
         <cite class="fn">{{comment.author_name.length == 0 ? "Anonimno" : comment.author_name}}</cite> <span class="says">
           napisao:</span> </div>
 
-      <div class="comment-meta commentmetadata"><a style="cursor : pointer;" (click)="respond(comment)">
+      <div class="comment-meta commentmetadata"><a style="cursor : pointer;" (click)="navigateTo(comment.id)">
           {{comment.date | date:'d. MMMM yyyy.' }} </a> </div>
 
       <div [innerHTML]="comment.content"></div>
@@ -29,7 +29,7 @@
           </div>
 
           <div class="comment-meta commentmetadata"><a style="cursor : pointer;" (click)="respond(child)">
-              {{child.date | date:'d. MMMM yyyy.' }} </a> </div>
+              {{child.date | date:'d. MMMM yyyy. h:m:s' }} </a> </div>
 
           <div [innerHTML]="child.content"></div>
 
@@ -42,8 +42,8 @@
                       <cite class="fn">{{child2.author_name.length == 0 ? "Anonimno" : child2.author_name}}</cite> <span class="says"> napisao:</span>
                     </div>
           
-                    <div class="comment-meta commentmetadata"><a style="cursor : pointer;" (click)="respond(child2)">
-                        {{child2.date | date:'d. MMMM yyyy.' }} </a> </div>
+                    <div class="comment-meta commentmetadata"><a style="cursor : pointer;" (click)="navigateTo(child2.id)">
+                        {{child2.date | date:'d. MMMM yyyy. h:m:s' }} </a> </div>
           
                     <div [innerHTML]="child2.content"></div>
           
@@ -56,8 +56,8 @@
                                 <cite class="fn">{{child3.author_name.length == 0 ? "Anonimno" : child3.author_name}}</cite> <span class="says"> napisao:</span>
                               </div>
                     
-                              <div class="comment-meta commentmetadata"><a style="cursor : pointer;" (click)="respond(child3)">
-                                  {{child3.date | date:'d. MMMM yyyy.' }} </a> </div>
+                              <div class="comment-meta commentmetadata"><a style="cursor : pointer;" (click)="navigateTo(child3.id)">
+                                  {{child3.date | date:'d. MMMM yyyy. h:m:s' }} </a> </div>
                     
                               <div [innerHTML]="child3.content"></div>
                     
@@ -70,8 +70,8 @@
                                           <cite class="fn">{{child4.author_name.length == 0 ? "Anonimno" : child4.author_name}}</cite> <span class="says"> napisao:</span>
                                         </div>
                               
-                                        <div class="comment-meta commentmetadata"><a style="cursor : pointer;" >
-                                            {{child4.date | date:'d. MMMM yyyy.' }} </a> </div>
+                                        <div class="comment-meta commentmetadata"><a (click)="navigateTo(child4.id)" style="cursor : pointer;" >
+                                            {{child4.date | date:'d. MMMM yyyy. h:m:s' }} </a> </div>
                               
                                         <div [innerHTML]="child4.content"></div>
                               

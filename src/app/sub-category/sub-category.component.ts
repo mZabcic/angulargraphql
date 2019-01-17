@@ -6,13 +6,13 @@ import gql from "graphql-tag";
 import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-category',
-  templateUrl: './category.component.html',
-  styleUrls: ['./category.component.css']
+  selector: 'app-sub-category',
+  templateUrl: './sub-category.component.html',
+  styleUrls: ['./sub-category.component.css']
 })
 
 // TODO PAGINACIJA
-export class CategoryComponent implements OnInit {
+export class SubCategoryComponent implements OnInit {
 
   categoryName : String;
   posts : any;
@@ -27,7 +27,7 @@ export class CategoryComponent implements OnInit {
 
 
     this.activatedRoute.params.subscribe(params => {
-      this.categoryName = params['category']; 
+      this.categoryName = params['subcategory']; 
       const getCategory = gql`
     {
       categories(per_page : 100, hide_empty : 1, slug : "${this.categoryName}") {
