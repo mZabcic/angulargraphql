@@ -2,8 +2,7 @@
 <section *ngIf="post != undefined" class="single-news">
     <header>
       <div class="single-news__background" [style.backgroundImage]="'url('+ post.featured_image_info.url +')'">
-        <h1 class="single-news__title">
-          {{post.title}}     </h1>
+        <h1 class="single-news__title" [innerHTML]="post.title"></h1>
       </div>
     </header>
     <div class="single-news__content content-style content-media-style" [innerHTML]="post.content">

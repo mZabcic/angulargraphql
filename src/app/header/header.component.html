@@ -17,7 +17,7 @@
       <ng-container>
         <li *ngFor="let menu of menuList" class="main-navigation__item main-navigation__item--menu-item main-navigation__item--menu-item-type-taxonomy main-navigation__item--menu-item-object-category">
           <a [href]="menu.url" class="main-navigation__link ">
-            <span class="main-navigation__link-text">{{ menu.title }}</span>
+            <span class="main-navigation__link-text" [innerHTML]="menu.title"></span>
           </a>
         </li>
       </ng-container>

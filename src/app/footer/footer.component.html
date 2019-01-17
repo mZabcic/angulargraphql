@@ -18,7 +18,7 @@
         <ul  class="footer-navigation ">
           <li *ngFor="let menu of menuList" class="footer-navigation__item  footer-navigation__item--active  footer-navigation__item--122  footer-navigation__item-- footer-navigation__item--menu-item footer-navigation__item--menu-item-type-custom footer-navigation__item--menu-item-object-custom footer-navigation__item--current-menu-item footer-navigation__item--current_page_item">
             <a [href]="menu.url" class="footer-navigation__link ">
-              <span class="footer-navigation__link-text">{{ menu.title }}</span>
+              <span class="footer-navigation__link-text" [innerHTML]="menu.title"></span>
             </a>
           </li>
         </ul>    

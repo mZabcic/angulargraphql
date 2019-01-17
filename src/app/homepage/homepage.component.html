@@ -7,7 +7,7 @@
           
           <div class="article-category__content">
           <div class="article-category__heading">
-              <h1 class="article-category__title"><a [href]="category.link"> {{category.name}} </a></h1>
+              <h1 class="article-category__title"><a [href]="category.link" [innerHTML]="category.name">  </a></h1>
           </div>
           <div class="article-category__grid">
           <article *ngFor="let post of posts.get(category.id)" class="article-grid">
@@ -18,8 +18,7 @@
             <div class="article-grid__content">
               <header>
               <h2 class="article-grid__heading">
-                <a class="article-grid__heading-link" [href]="post.link">
-                  {{post.title}}      </a>
+                <a class="article-grid__heading-link" [href]="post.link" [innerHTML]="post.title"></a>
                 <span class="article-grid__heading-date">
                     {{post.date | date:'d. MMMM yyyy.' }}     </span>
               </h2>
@@ -27,7 +26,7 @@
               <div class="article-grid__excerpt block-with-text" [innerHTML]="post.excerpt">
               </div>
               <div class="article-grid__heading-categories">
-                <a *ngFor="let cat of post.categories_object"  [href]="cat.link"> {{cat.name}} </a>      </div>
+                <a *ngFor="let cat of post.categories_object"  [href]="cat.link" [innerHTML]="cat.name"></a>      </div>
             </div>
             </div>
             </article>

@@ -125,6 +125,16 @@ export class CommentsComponent implements OnInit {
       this.count++;
       for (let child of comment.children) {
         this.count++;
+        for (let child2 of child.children) {
+          this.count++;
+          for (let child3 of child2.children) {
+            this.count++;
+            for (let child4 of child3.children) {
+              this.count++;
+            }
+          }
+        }
+        
       }
     }
   }
